@@ -6,23 +6,6 @@ function is_all_rows_hidden(value) {
   return value.hidden == false;
 }
 
-function filter_table(elem) {
-  var outcome_att = 'data-test-result';
-  var outcome = elem.getAttribute(outcome_att);
-  console.log(outcome);
-  class_outcome = outcome + ' results-table-row';
-  var outcome_rows = document.getElementsByClassName(class_outcome);
-
-  for (var i = 0; i < outcome_rows.length; i++) {
-    outcome_rows[i].hidden = !elem.checked;
-  }
-
-  var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
-  var all_rows_hidden = rows.length == 0 ? true : false;
-  var not_found_message = document.getElementById('not-found-message');
-  not_found_message.hidden = !all_rows_hidden;
-}
-
 function toArray(iter) {
   if (iter === null) {
     return null;
@@ -57,14 +40,6 @@ function hideExtras(colresultElem) {
 }
 
 function addCollapse() {
-  // Add links for show/hide all
-  const resulttable = find('table#results-table');
-  const showhideall = document.createElement('p');
-  showhideall.innerHTML =
-    '<a href="javascript:showAllExtras()">Show all details</a> / ' +
-    '<a href="javascript:hideAllExtras()">Hide all details</a>';
-  resulttable.parentElement.insertBefore(showhideall, resulttable);
-
   // Add show/hide link to each result
   findAll('.col-result').forEach(function (elem) {
     const collapsed = getQueryParameter('collapsed') || 'Passed';

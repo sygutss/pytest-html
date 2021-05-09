@@ -188,6 +188,11 @@ div.video {
   font-style: italic;
   cursor: pointer;
 }
+.output_filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /*------------------
  * 3. Sorting items
@@ -218,30 +223,6 @@ div.video {
       border-right-color: transparent;
     }
   }
-}
-
-.sort-icon {
-  // font-size: 0px;
-  // float: left;
-  // margin-right: $spacing;
-  // margin-top: $spacing;
-
-  // /*triangle*/
-  // $triangle-width: 8px;
-  // width: 0;
-  // height: 0;
-  // border-left: $triangle-width solid transparent;
-  // border-right: $triangle-width solid transparent;
-
-  // .asc {
-  //   /*finish triangle*/
-  //   border-bottom: $triangle-width solid #999;
-  // }
-
-  // .desc {
-  //   /*finish triangle*/
-  //   border-top: $triangle-width solid #999;
-  // }
 }
 
 .hidden {

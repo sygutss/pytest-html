@@ -167,6 +167,12 @@ div.video video {
   cursor: pointer;
 }
 
+.output_filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /*------------------
  * 3. Sorting items
  *------------------*/
